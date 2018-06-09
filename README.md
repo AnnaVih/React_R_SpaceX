@@ -1,6 +1,6 @@
 # R_SpaceX React Project
 
-R_SpaceX - front end project  built  with react.js and REACT ROUTER 4 using standards ES6+. The user can see latest launches/Rackets info/ history r-SpaceX.
+R_SpaceX - front end project  built  with react.js and REACT ROUTER 4 using standards ES6+. The user can see latest launches/Rockets info/ history r-SpaceX.
 
 ### Version
 1.0.0
