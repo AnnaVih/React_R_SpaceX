@@ -32,6 +32,7 @@
         ],
         "jsx-a11y/href-no-hash": "off",
         "react/jsx-filename-extension": 0,
-        "strict": 0
+        "strict": 0,
+        "react/prop-types": 0
     }
 }
