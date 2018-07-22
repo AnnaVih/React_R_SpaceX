@@ -1,19 +1,33 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react'
+import { connect } from 'react-redux'
+import * as actions from '../actions'
 
-import Aux from '../hoc/Aux/Aux';
+import Aux from '../hoc/Aux/Aux'
 
 class About extends Component {
-  state = {
-    data: '',
-  };
+  componentWillMount() {
+    const { pathname } = this.props.location
+    console.log(pathname)
+    this.props.fetchSpaceXCompanyData(pathname)
+  }
 
   render() {
     return (
       <Aux>
-        <div data={this.state.data}>About SPACEX</div>
+        <div>About SPACEX</div>
       </Aux>
-    );
+    )
   }
 }
 
-export default About;
+function mapStateToProps(state) {
+  console.log(state)
+  return {
+    spaceXinfo: state.spaceXinfo
+  }
+}
+
+export default connect(
+  mapStateToProps,
+  actions
+)(About)
