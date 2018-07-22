@@ -1,0 +1,1 @@
+export const FETCH_COMPANY_DATA = 'FETCH_COMPANY_DATA'

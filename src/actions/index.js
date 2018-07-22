@@ -1,0 +1,1 @@
+export { fetchSpaceXCompanyData } from './spaceXData'
