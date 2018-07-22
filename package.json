@@ -1,9 +1,18 @@
 {
   "name": "react.r.space.x",
+  "description": "Simple React-Redux project to display latest SpaceX rocket launches",
   "version": "0.1.0",
-  "private": true,
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "lint": "eslint src",
+    "eject": "react-scripts eject"
+  },
   "dependencies": {
+    "axios": "^0.18.0",
     "bootstrap": "^4.1.1",
+    "jquery": "^1.9.1",
     "prop-types": "^15.6.1",
     "react": "^16.4.0",
     "react-dom": "^16.4.0",
@@ -12,21 +21,15 @@
     "react-router-dom": "^4.2.2",
     "react-scripts": "1.1.4",
     "reactstrap": "^6.1.0",
-    "redux": "^4.0.0"
-  },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
-    "lint": "eslint src",
-    "eject": "react-scripts eject"
+    "redux": "^4.0.0",
+    "redux-promise": "^0.6.0"
   },
   "devDependencies": {
     "eslint": "^4.19.1",
     "eslint-config-airbnb": "^16.1.0",
     "eslint-config-prettier": "^2.9.0",
     "eslint-plugin-import": "^2.12.0",
-    "eslint-plugin-jsx-a11y": "^6.0.3",
+    "eslint-plugin-jsx-a11y": "^5.1.1",
     "eslint-plugin-prettier": "^2.6.0",
     "eslint-plugin-react": "^7.9.1",
     "prettier": "1.13.5"
