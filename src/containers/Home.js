@@ -1,13 +1,13 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react'
 
 class Home extends Component {
   state = {
-    data: [],
-  };
+    data: []
+  }
 
   render() {
-    return <div data={this.state.data}>Home1</div>;
+    return <div data={this.state.data}>Home1</div>
   }
 }
 
-export default Home;
+export default Home
