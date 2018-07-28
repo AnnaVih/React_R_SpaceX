@@ -2,15 +2,15 @@ import React from 'react'
 import { BrowserRouter, Switch, Route } from 'react-router-dom'
 
 import Layout from './hoc/Layout/Layout'
-import Home from './containers/Home'
-import About from './containers/About'
+import HomePage from './containers/HomePage'
+import AboutPage from './containers/AboutPage'
 
 const App = () => (
   <BrowserRouter>
     <Layout>
       <Switch>
-        <Route exact path="/" component={Home} />
-        <Route path="/info" component={About} />
+        <Route exact path="/" component={HomePage} />
+        <Route path="/info" component={AboutPage} />
       </Switch>
     </Layout>
   </BrowserRouter>
