@@ -1,13 +1,21 @@
 import React from 'react'
+import { createComponent } from 'react-fela'
 
 import Aux from '../Aux/Aux'
-import Header from '../../components/Layout/Header/Header'
+import Navigation from '../../components/Layout/Navigation/Navigation'
 import Footer from '../../components/Layout/Footer/Footer'
+
+const MainContent = createComponent(() => ({
+  maxWidth: '1200px',
+  minWidth: '360px'
+}))
 
 const Layout = props => (
   <Aux>
-    <Header />
-    <main>{props.children}</main>
+    <Navigation />
+    <MainContent>
+      <main>{props.children}</main>
+    </MainContent>
     <Footer />
   </Aux>
 )
