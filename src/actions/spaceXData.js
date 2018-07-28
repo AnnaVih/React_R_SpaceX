@@ -4,12 +4,12 @@ import * as actionTypes from './action_types'
 
 export const ROOT_DATA = 'https://api.spacexdata.com/v2'
 
-export const fetchSpaceXCompanyData = queryParam => {
+export const fetchCompanyInfo = queryParam => {
   const infoUrl = `${ROOT_DATA}${queryParam}`
   const request = axios.get(infoUrl)
 
   return {
-    type: actionTypes.FETCH_COMPANY_DATA,
+    type: actionTypes.FETCH_COMPANY_INFO,
     payload: request
   }
 }

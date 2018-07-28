@@ -1,1 +1,1 @@
-export { fetchSpaceXCompanyData } from './spaceXData'
+export { fetchCompanyInfo } from './spaceXData'
