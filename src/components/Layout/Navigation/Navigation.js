@@ -4,18 +4,18 @@ import { createComponent } from 'react-fela'
 import BrandLogo from './BrandLogo'
 import NavigationLinks from './NavigationLinks'
 
-const NavigationStyle = createComponent(
+const NavigationWrapper = createComponent(
   () => ({
     backgroundColor: '#181c1f'
   }),
-  'nav'
+  'div'
 )
 
 const Navigation = () => (
-  <NavigationStyle>
+  <NavigationWrapper>
     <BrandLogo />
     <NavigationLinks />
-  </NavigationStyle>
+  </NavigationWrapper>
 )
 
 export default Navigation

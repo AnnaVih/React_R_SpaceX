@@ -1,9 +1,7 @@
 import React, { Component } from 'react'
 import Aux from '../hoc/Aux/Aux'
 
-import HomeHeader from '../components/HomeHeader/HomeHeader'
-
-class HomePage extends Component {
+class LaunchesList extends Component {
   state = {
     data: []
   }
@@ -11,10 +9,10 @@ class HomePage extends Component {
   render() {
     return (
       <Aux>
-        <HomeHeader data={this.state.data} />
+        <h1 data={this.state.data}>Launches List</h1>
       </Aux>
     )
   }
 }
 
-export default HomePage
+export default LaunchesList

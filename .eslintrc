@@ -1,40 +1,35 @@
 {
-    "extends": [
-        "airbnb",
-        "prettier",
-        "prettier/react"
+  "extends": ["airbnb", "prettier", "prettier/react"],
+  "plugins": ["prettier"],
+  "parser": "babel-eslint",
+  "env": {
+    "node": true,
+    "browser": true,
+    "es6": true
+  },
+  "rules": {
+    "jsx-a11y/anchor-is-valid": "off",
+    "quotes": [
+      2,
+      "single",
+      {
+        "avoidEscape": true,
+        "allowTemplateLiterals": true
+      }
     ],
-    "plugins": [
-        "prettier"
+    "prettier/prettier": [
+      "error",
+      {
+        "trailingComma": false,
+        "singleQuote": true,
+        "printWidth": 120,
+        "semi": false
+      }
     ],
-    "parser": "babel-eslint",
-    "env": {
-        "node": true,
-        "browser": true,
-        "es6": true
-    },
-    "rules": {
-        "quotes": [
-            2,
-            "single",
-            {
-                "avoidEscape": true,
-                "allowTemplateLiterals": true
-            }
-        ],
-        "prettier/prettier": [
-            "error",
-            {
-                "trailingComma": false,
-                "singleQuote": true,
-                "printWidth": 120,
-                "semi": false
-            }
-        ],
-        "jsx-a11y/href-no-hash": "off",
-        "react/jsx-filename-extension": 0,
-        "strict": 0,
-        "react/prop-types": 0,
-        "import/prefer-default-export": "off"
-    }
+    "jsx-a11y/href-no-hash": "off",
+    "react/jsx-filename-extension": 0,
+    "strict": 0,
+    "react/prop-types": 0,
+    "import/prefer-default-export": "off"
+  }
 }

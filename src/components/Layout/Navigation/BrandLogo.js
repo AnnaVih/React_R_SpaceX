@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import Aux from '../../../hoc/Aux/Aux'
 
 import SpaceXLogo from '../../../assets/images/spaceX_logo.png'
@@ -6,7 +7,9 @@ import SpaceXLogo from '../../../assets/images/spaceX_logo.png'
 
 const BrandLogo = () => (
   <Aux>
-    <img src={SpaceXLogo} alt="spaceX logo" />
+    <Link to="/">
+      <img src={SpaceXLogo} alt="spaceX logo" />
+    </Link>
   </Aux>
 )
 

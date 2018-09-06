@@ -13,16 +13,13 @@ class AboutPage extends Component {
   render() {
     return (
       <Aux>
-        <div>About</div>
+        <h1>About</h1>
       </Aux>
     )
   }
 }
 
-const mapStateToProps = state => {
-  console.log('state:', state)
-  return { spaceXInfo: state.spaceXData.companyInfo }
-}
+const mapStateToProps = state => ({ spaceXInfo: state.spaceXData.companyInfo })
 
 const mapDispatchToProps = dispatch => ({
   fetchCompanyInfo: pageName => dispatch(actions.fetchCompanyInfo(pageName))

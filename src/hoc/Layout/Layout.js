@@ -6,6 +6,7 @@ import Navigation from '../../components/Layout/Navigation/Navigation'
 import Footer from '../../components/Layout/Footer/Footer'
 
 const MainContent = createComponent(() => ({
+  margin: '0 auto',
   maxWidth: '1200px',
   minWidth: '360px'
 }))
