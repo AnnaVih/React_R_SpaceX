@@ -1,15 +1,23 @@
-import React from 'react';
+import React from 'react'
+import styled from 'styled-components'
 
-import Aux from '../Aux/Aux';
-import Header from '../../components/Layout/Header/Header';
-import Footer from '../../components/Layout/Footer/Footer';
+import Aux from '../Aux/Aux'
+import Navigation from '../../components/Layout/Navigation/Navigation'
+import Footer from '../../components/Layout/Footer/Footer'
 
+const MainContent = styled.div`
+  margin: 0 auto;
+  max-width: 1200px;
+  min-width: 360px;
+`
 const Layout = props => (
   <Aux>
-    <Header />
-    <main>{props.children}</main>
+    <Navigation />
+    <MainContent>
+      <main>{props.children}</main>
+    </MainContent>
     <Footer />
   </Aux>
-);
+)
 
-export default Layout;
+export default Layout

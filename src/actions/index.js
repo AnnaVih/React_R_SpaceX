@@ -1,0 +1,1 @@
+export { fetchCompanyInfo } from './spaceXData'
