@@ -1,15 +1,12 @@
 import React from 'react'
-import { createComponent } from 'react-fela'
+import styled from 'styled-components'
 
 import SpaceXBgImage from '../../assets/images/spaceX_homeBg.jpg'
 
-const HomeHeaderWrapper = createComponent(
-  () => ({
-    height: '80vh',
-    backgroundImage: `url(${SpaceXBgImage})`
-  }),
-  'header'
-)
+const HomeHeaderWrapper = styled.header`
+  height: 80vh;
+  background-image: url(${SpaceXBgImage});
+`
 
 const HomeHeader = () => (
   <HomeHeaderWrapper>

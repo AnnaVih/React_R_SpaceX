@@ -1,15 +1,12 @@
 import React from 'react'
-import { createComponent } from 'react-fela'
+import styled from 'styled-components'
 
 import BrandLogo from './BrandLogo'
 import NavigationLinks from './NavigationLinks'
 
-const NavigationWrapper = createComponent(
-  () => ({
-    backgroundColor: '#181c1f'
-  }),
-  'div'
-)
+const NavigationWrapper = styled.div`
+  background-color: #181c1f;
+`
 
 const Navigation = () => (
   <NavigationWrapper>

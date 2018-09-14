@@ -1,29 +1,20 @@
 import React from 'react'
-import { createComponent } from 'react-fela'
+import styled from 'styled-components'
 
-const FooterWrapper = createComponent(
-  () => ({
-    height: '170px'
-  }),
-  'div'
-)
+const FooterWrapper = styled.div`
+  height: 170px;
+`
 
-const FooterTop = createComponent(
-  () => ({
-    padding: '40px',
-    backgroundColor: '#181c1f'
-  }),
-  'div'
-)
+const FooterTop = styled.div`
+  padding: 40px;
+  background-color: #181c1f;
+`
 
-const FooterBottom = createComponent(
-  () => ({
-    backgroundColor: '#0e1112',
-    padding: '22px',
-    color: '#666'
-  }),
-  'div'
-)
+const FooterBottom = styled.div`
+  background-color: #0e1112;
+  padding: 22px;
+  color: #666;
+`
 
 const Footer = () => (
   <FooterWrapper className="pt-hf">

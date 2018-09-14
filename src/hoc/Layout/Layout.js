@@ -1,16 +1,15 @@
 import React from 'react'
-import { createComponent } from 'react-fela'
+import styled from 'styled-components'
 
 import Aux from '../Aux/Aux'
 import Navigation from '../../components/Layout/Navigation/Navigation'
 import Footer from '../../components/Layout/Footer/Footer'
 
-const MainContent = createComponent(() => ({
-  margin: '0 auto',
-  maxWidth: '1200px',
-  minWidth: '360px'
-}))
-
+const MainContent = styled.div`
+  margin: 0 auto;
+  max-width: 1200px;
+  min-width: 360px;
+`
 const Layout = props => (
   <Aux>
     <Navigation />
