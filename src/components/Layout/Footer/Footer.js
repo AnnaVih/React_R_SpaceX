@@ -16,10 +16,20 @@ const FooterBottom = styled.div`
   color: #666;
 `
 
+const FooterContent = styled.div`
+  margin: 0 auto;
+  max-width: 990px;
+  min-width: 360px;
+`
+
 const Footer = () => (
-  <FooterWrapper className="pt-hf">
-    <FooterTop>Footer Top</FooterTop>
-    <FooterBottom>Footer Bottom</FooterBottom>
+  <FooterWrapper>
+    <FooterTop>
+      <FooterContent>Footer Top</FooterContent>
+    </FooterTop>
+    <FooterBottom>
+      <FooterContent>Footer Bottom</FooterContent>
+    </FooterBottom>
   </FooterWrapper>
 )
 
