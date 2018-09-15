@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import * as actions from '../actions/index'
+import * as actions from '../../actions/index'
 
-import Aux from '../hoc/Aux/Aux'
+import Aux from '../../hoc/Aux/Aux'
 
 class AboutPage extends Component {
   componentDidMount() {

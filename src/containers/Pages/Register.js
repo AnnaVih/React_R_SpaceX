@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
-import Aux from '../hoc/Aux/Aux'
+import Aux from '../../hoc/Aux/Aux'
 
-class Login extends Component {
+class Register extends Component {
   state = {
     data: []
   }
@@ -15,4 +15,4 @@ class Login extends Component {
   }
 }
 
-export default Login
+export default Register
