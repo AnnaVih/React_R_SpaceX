@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import Aux from '../../hoc/Aux/Aux'
+import Header from '../../components/Layout/Header/Header'
 
 class HomePage extends Component {
   state = {
@@ -9,7 +10,7 @@ class HomePage extends Component {
   render() {
     return (
       <Aux>
-        <h1 state={this.state.data}>Home</h1>
+        <Header data={this.state.data} />
       </Aux>
     )
   }

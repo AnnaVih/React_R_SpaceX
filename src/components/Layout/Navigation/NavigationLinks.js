@@ -5,7 +5,7 @@ import styled from 'styled-components'
 
 import Aux from '../../../hoc/Aux/Aux'
 
-const NavigationWrapper = styled.div`
+const NavigationLinksWrapper = styled.div`
   width: 100%;
   background: lightgray;
   @media (min-width: 767px) {
@@ -16,7 +16,7 @@ const NavigationWrapper = styled.div`
   }
 `
 
-const SubNavigation = styled.div`
+const SubNavigationLinks = styled.div`
   display: flex;
   flex-wrap: wrap;
   width: 100%;
@@ -74,8 +74,8 @@ class NavigationLinks extends Component {
 
     return (
       <Aux>
-        <NavigationWrapper navWidth={70}>
-          <SubNavigation navWidth={75}>
+        <NavigationLinksWrapper navWidth={70}>
+          <SubNavigationLinks navWidth={75}>
             <NavigationItem>
               <Link to="/info">ABOUT SPACEX</Link>{' '}
             </NavigationItem>
@@ -85,9 +85,9 @@ class NavigationLinks extends Component {
             <NavigationItem>
               <Link to="/launches">LAUNCHES</Link>{' '}
             </NavigationItem>
-          </SubNavigation>
-          <SubNavigation navWidth={25}>{isAuthenticated ? authLinks : guestLinks}</SubNavigation>
-        </NavigationWrapper>
+          </SubNavigationLinks>
+          <SubNavigationLinks navWidth={25}>{isAuthenticated ? authLinks : guestLinks}</SubNavigationLinks>
+        </NavigationLinksWrapper>
       </Aux>
     )
   }

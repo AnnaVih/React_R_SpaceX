@@ -2,34 +2,29 @@ import React from 'react'
 import styled from 'styled-components'
 
 const FooterWrapper = styled.div`
-  height: 170px;
+  height: 140px;
 `
 
-const FooterTop = styled.div`
-  padding: 40px;
-  background-color: #181c1f;
-`
-
-const FooterBottom = styled.div`
-  background-color: #0e1112;
-  padding: 22px;
-  color: #666;
+const SubFooter = styled.div`
+  padding: ${props => props.footerPadding}px;
+  background-color: ${props => props.footerBg};
 `
 
 const FooterContent = styled.div`
   margin: 0 auto;
   max-width: 990px;
   min-width: 360px;
+  color: white;
 `
 
 const Footer = () => (
   <FooterWrapper>
-    <FooterTop>
+    <SubFooter footerPadding={40} footerBg="#181c1f">
       <FooterContent>Footer Top</FooterContent>
-    </FooterTop>
-    <FooterBottom>
+    </SubFooter>
+    <SubFooter footerPadding={22} footerBg="#0e1112">
       <FooterContent>Footer Bottom</FooterContent>
-    </FooterBottom>
+    </SubFooter>
   </FooterWrapper>
 )
 
