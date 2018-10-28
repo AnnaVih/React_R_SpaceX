@@ -1,1 +1,0 @@
-export const FETCH_COMPANY_INFO = 'FETCH_COMPANY_INFO'
