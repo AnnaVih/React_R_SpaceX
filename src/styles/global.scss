@@ -12,14 +12,17 @@ html {
     font-size: 14px;
     font-family: "Lato", sans-serif;
     color: #4b5256;
-  }
 
-  a {
-    color: white;
-    &:hover,
-    &:active,
-    &:focus {
-      color: #dfa404;
+    a {
+      color: white;
+      &:hover,
+      &.active,
+      &:focus {
+        color: #dfa404;
+      }
+      &:focus {
+        text-decoration: none;
+      }
     }
   }
 }
