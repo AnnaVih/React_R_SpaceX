@@ -15,27 +15,32 @@ import BlogList from './containers/Pages/BlogList'
 import Blog from './containers/Pages/Blog'
 import Login from './containers/Pages/Login'
 import Register from './containers/Pages/Register'
-import NoFoundPage from './components/NoFoundPage'
+import Aux from './hoc/Aux/Aux'
+import Navigation from './containers/Navigation'
+import Footer from './components/Layout/Footer/Footer'
 
 library.add(faBars)
 
 const App = () => (
   <BrowserRouter>
-    <Layout>
-      <Switch>
-        <Route exact path="/" component={HomePage} />
-        <Route path="/info" component={InfoPage} />
-        <Route exact path="/rockets" component={RocketsList} />
-        <Route path="/rockets/:id" component={Rocket} />
-        <Route exact path="/launches" component={LaunchesList} />
-        <Route path="/launches/:id" component={Launch} />
-        <Route exact path="/blogs" component={BlogList} />
-        <Route path="/blogs/:id" component={Blog} />
-        <Route path="/login" component={Login} />
-        <Route path="/register" component={Register} />
-        <Route component={NoFoundPage} />
-      </Switch>
-    </Layout>
+    <Aux>
+      <Navigation />
+      <Route exact path="/" component={HomePage} />
+      <Layout>
+        <Switch>
+          <Route exact path="/info" component={InfoPage} />
+          <Route exact path="/rockets" component={RocketsList} />
+          <Route path="/rockets/:id" component={Rocket} />
+          <Route exact path="/launches" component={LaunchesList} />
+          <Route path="/launches/:id" component={Launch} />
+          <Route exact path="/blog" component={BlogList} />
+          <Route path="/blogs/:id" component={Blog} />
+          <Route path="/login" component={Login} />
+          <Route path="/register" component={Register} />
+        </Switch>
+      </Layout>
+      <Footer />
+    </Aux>
   </BrowserRouter>
 )
 

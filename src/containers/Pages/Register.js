@@ -9,7 +9,7 @@ class Register extends Component {
   render() {
     return (
       <Aux>
-        <h1 data={this.state.data}>Login</h1>
+        <h1 data={this.state.data}>Register</h1>
       </Aux>
     )
   }

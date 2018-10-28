@@ -9,11 +9,11 @@ const NavigationContainer = styled.div`
   background-color: #181c1f;
   padding-top: 20px;
   @media (min-width: 767px) {
-    padding: 20px 0;
+    padding: 20px 20px;
   }
 `
 
-const NavigationWrapp = styled.div`
+const NavigationWrapper = styled.div`
   margin: 0 auto;
   max-width: 990px;
   min-width: 360px;
@@ -33,13 +33,13 @@ const NavigationMobileIcon = styled.div`
 
 const Navigation = () => (
   <NavigationContainer>
-    <NavigationWrapp>
+    <NavigationWrapper>
       <BrandLogo />
       <NavigationMobileIcon>
-        <FontAwesomeIcon icon="bars" size="lg" />
+        <FontAwesomeIcon icon="bars" size="lg" color="white" />
       </NavigationMobileIcon>
       <NavigationLinks />
-    </NavigationWrapp>
+    </NavigationWrapper>
   </NavigationContainer>
 )
 

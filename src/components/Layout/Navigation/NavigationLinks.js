@@ -1,11 +1,12 @@
 import React, { Component } from 'react'
 
-import { Link } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 import styled from 'styled-components'
 
 import Aux from '../../../hoc/Aux/Aux'
 
-const NavigationWrapper = styled.div`
+const NavigationLinksWrapper = styled.div`
+  display: none;
   width: 100%;
   background: lightgray;
   @media (min-width: 767px) {
@@ -16,7 +17,7 @@ const NavigationWrapper = styled.div`
   }
 `
 
-const SubNavigation = styled.div`
+const SubNavigationLinks = styled.div`
   display: flex;
   flex-wrap: wrap;
   width: 100%;
@@ -51,7 +52,7 @@ class NavigationLinks extends Component {
     const authLinks = (
       <Aux>
         <NavigationItem>
-          <Link to="/blogs">Blog</Link>
+          <NavLink to="/blogs">Blog</NavLink>
         </NavigationItem>
         <NavigationItem>
           <a onClick={this.onLogoutClick} href="#">
@@ -64,30 +65,33 @@ class NavigationLinks extends Component {
     const guestLinks = (
       <Aux>
         <NavigationItem>
-          <Link to="/login">Login</Link>
+          <NavLink to="/login">Login</NavLink>
         </NavigationItem>
         <NavigationItem>
-          <Link to="/register">Sign Up</Link>
+          <NavLink to="/register">Sign Up</NavLink>
         </NavigationItem>
       </Aux>
     )
 
     return (
       <Aux>
-        <NavigationWrapper navWidth={70}>
-          <SubNavigation navWidth={75}>
+        <NavigationLinksWrapper navWidth={70}>
+          <SubNavigationLinks navWidth={75}>
             <NavigationItem>
-              <Link to="/info">ABOUT SPACEX</Link>{' '}
+              <NavLink to="/info">ABOUT SPACEX</NavLink>
             </NavigationItem>
             <NavigationItem>
-              <Link to="/rockets">ROCKETS</Link>{' '}
+              <NavLink to="/rockets">ROCKETS</NavLink>
             </NavigationItem>
             <NavigationItem>
-              <Link to="/launches">LAUNCHES</Link>{' '}
+              <NavLink to="/launches">LAUNCHES</NavLink>
             </NavigationItem>
-          </SubNavigation>
-          <SubNavigation navWidth={25}>{isAuthenticated ? authLinks : guestLinks}</SubNavigation>
-        </NavigationWrapper>
+            <NavigationItem>
+              <NavLink to="/blog">BLOG</NavLink>
+            </NavigationItem>
+          </SubNavigationLinks>
+          <SubNavigationLinks navWidth={25}>{isAuthenticated ? authLinks : guestLinks}</SubNavigationLinks>
+        </NavigationLinksWrapper>
       </Aux>
     )
   }
