@@ -36,7 +36,7 @@ const Navigation = () => (
     <NavigationWrapper>
       <BrandLogo />
       <NavigationMobileIcon>
-        <FontAwesomeIcon icon="bars" size="lg" />
+        <FontAwesomeIcon icon="bars" size="lg" color="white" />
       </NavigationMobileIcon>
       <NavigationLinks />
     </NavigationWrapper>
