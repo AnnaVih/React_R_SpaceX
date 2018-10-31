@@ -21,7 +21,8 @@ class AboutPage extends Component {
 
 const mapStateToProps = state => ({
   spaceXInfo: state.spaceXData.companyInfo,
-  error: state.spaceXData.error
+  error: state.spaceXData.error,
+  loading: state.spaceXData.loading
 })
 
 const mapDispatchToProps = dispatch => ({
