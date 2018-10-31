@@ -8,8 +8,8 @@ export function* requestCompanyInfoSaga(action) {
   try {
     const infoUrl = `${ROOT_DATA}${action.queryParam}`
     const requestedData = yield axios.get(infoUrl)
-    yield put(actions.displayCompanyInfo(requestedData))
+    yield put(actions.displayCompanyInfo(requestedData.data))
   } catch (err) {
-    yield put(actions.displayCompanyInfoFailed(err))
+    yield put(actions.displayCompanyInfoFailed())
   }
 }
