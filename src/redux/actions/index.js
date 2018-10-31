@@ -1,1 +1,1 @@
-export { fetchCompanyInfo } from './spaceXData'
+export { fetchCompanyInfo, displayCompanyInfo, displayCompanyInfoFailed } from './spaceXData'
