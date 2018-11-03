@@ -16,7 +16,7 @@ import Blog from './containers/Pages/Blog'
 import Login from './containers/Pages/Login'
 import Register from './containers/Pages/Register'
 import Aux from './hoc/Aux/Aux'
-import Navigation from './containers/Navigation'
+import Navigation from './containers/Navigation/NavigationContainer'
 import Footer from './components/Layout/Footer/Footer'
 
 library.add(faBars)

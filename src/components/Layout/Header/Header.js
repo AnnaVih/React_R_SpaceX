@@ -5,8 +5,8 @@ import styled from 'styled-components'
 
 import SpaceXBgImage from '../../../assets/images/missions-header.jpg'
 
-import HeadLine from '../../HeadLine'
-import Button from '../../Button'
+import HeadLine from '../../../common/HeadLine/HeadLine'
+import Button from '../../../common/Button/Button'
 
 const HeaderWrapper = styled.header`
   background-image: url(${SpaceXBgImage});
