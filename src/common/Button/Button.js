@@ -1,5 +1,5 @@
 import React from 'react'
-
+import PropTypes from 'prop-types'
 import styled from 'styled-components'
 
 const SimpleButton = styled.button`
@@ -19,5 +19,11 @@ const Button = ({ color, bgColor, children }) => (
     {children}
   </SimpleButton>
 )
+
+Button.propTypes = {
+  color: PropTypes.string.isRequired,
+  bgColor: PropTypes.string.isRequired,
+  children: PropTypes.string.isRequired
+}
 
 export default Button
