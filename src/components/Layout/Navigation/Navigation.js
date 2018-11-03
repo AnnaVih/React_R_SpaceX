@@ -1,9 +1,10 @@
 import React from 'react'
 import styled from 'styled-components'
+import PropTypes from 'prop-types'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
-import BrandLogo from '../components/Layout/Navigation/BrandLogo'
-import NavigationLinks from '../components/Layout/Navigation/NavigationLinks'
+import BrandLogo from './BrandLogo'
+import NavigationLinks from './NavigationLinks'
 
 const NavigationContainer = styled.div`
   background-color: #181c1f;
@@ -31,16 +32,21 @@ const NavigationMobileIcon = styled.div`
   }
 `
 
-const Navigation = () => (
+const Navigation = ({ auth, onLogout }) => (
   <NavigationContainer>
     <NavigationWrapper>
       <BrandLogo />
       <NavigationMobileIcon>
         <FontAwesomeIcon icon="bars" size="lg" color="white" />
       </NavigationMobileIcon>
-      <NavigationLinks />
+      <NavigationLinks authenticated={auth} onLogoutClick={onLogout} />
     </NavigationWrapper>
   </NavigationContainer>
 )
+
+Navigation.propTypes = {
+  auth: PropTypes.bool.isRequired,
+  onLogout: PropTypes.func.isRequired
+}
 
 export default Navigation
