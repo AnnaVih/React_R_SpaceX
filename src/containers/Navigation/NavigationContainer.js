@@ -1,4 +1,5 @@
 import { connect } from 'react-redux'
+import { withRouter } from 'react-router-dom'
 import Navigation from '../../components/Layout/Navigation/Navigation'
 import * as actions from '../../redux/actions/index'
 
@@ -10,7 +11,9 @@ const mapDispatchToProps = dispatch => ({
   onLogout: () => dispatch(actions.handleLogOut())
 })
 
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(Navigation)
+export default withRouter(
+  connect(
+    mapStateToProps,
+    mapDispatchToProps
+  )(Navigation)
+)

@@ -8,9 +8,10 @@ class HomePage extends Component {
   }
 
   render() {
+    const { data } = this.state
     return (
       <Aux>
-        <Header data={this.state.data} />
+        <Header data={data} />
       </Aux>
     )
   }

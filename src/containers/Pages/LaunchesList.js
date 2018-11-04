@@ -7,9 +7,10 @@ class LaunchesList extends Component {
   }
 
   render() {
+    const { data } = this.state
     return (
       <Aux>
-        <h1 data={this.state.data}>Launches List</h1>
+        <h1 data={data}>Launches List</h1>
       </Aux>
     )
   }

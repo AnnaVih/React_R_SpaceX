@@ -1,5 +1,5 @@
 import React from 'react'
-import { BrowserRouter, Switch, Route } from 'react-router-dom'
+import { Switch, Route } from 'react-router-dom'
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { faBars } from '@fortawesome/free-solid-svg-icons'
 
@@ -15,33 +15,30 @@ import BlogList from './containers/Pages/BlogList'
 import Blog from './containers/Pages/Blog'
 import Login from './containers/Pages/Login'
 import Register from './containers/Pages/Register'
-import Aux from './hoc/Aux/Aux'
 import Navigation from './containers/Navigation/NavigationContainer'
 import Footer from './components/Layout/Footer/Footer'
+import Aux from './hoc/Aux/Aux'
 
 library.add(faBars)
 
 const App = () => (
-  <BrowserRouter>
-    <Aux>
-      <Navigation />
-      <Route exact path="/" component={HomePage} />
-      <Layout>
-        <Switch>
-          <Route exact path="/info" component={InfoPage} />
-          <Route exact path="/rockets" component={RocketsList} />
-          <Route path="/rockets/:id" component={Rocket} />
-          <Route exact path="/launches" component={LaunchesList} />
-          <Route path="/launches/:id" component={Launch} />
-          <Route exact path="/blog" component={BlogList} />
-          <Route path="/blogs/:id" component={Blog} />
-          <Route path="/login" component={Login} />
-          <Route path="/register" component={Register} />
-        </Switch>
-      </Layout>
-      <Footer />
-    </Aux>
-  </BrowserRouter>
+  <Aux>
+    <Navigation />
+    <Route exact path="/" component={HomePage} />
+    <Layout>
+      <Switch>
+        <Route path="/info" component={InfoPage} />
+        <Route path="/rockets" component={RocketsList} />
+        <Route path="/rockets/:id" component={Rocket} />
+        <Route path="/launches" component={LaunchesList} />
+        <Route path="/launches/:id" component={Launch} />
+        <Route path="/blog" component={BlogList} />
+        <Route path="/blogs/:id" component={Blog} />
+        <Route path="/login" component={Login} />
+        <Route path="/register" component={Register} />
+      </Switch>
+    </Layout>
+    <Footer />
+  </Aux>
 )
-
 export default App

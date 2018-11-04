@@ -22,8 +22,7 @@ const Button = ({ color, bgColor, children }) => (
 
 Button.propTypes = {
   color: PropTypes.string.isRequired,
-  bgColor: PropTypes.string.isRequired,
-  children: PropTypes.string.isRequired
+  bgColor: PropTypes.string.isRequired
 }
 
 export default Button

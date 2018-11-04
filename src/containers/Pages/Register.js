@@ -7,9 +7,10 @@ class Register extends Component {
   }
 
   render() {
+    const { data } = this.state
     return (
       <Aux>
-        <h1 data={this.state.data}>Register</h1>
+        <h1 data={data}>Register</h1>
       </Aux>
     )
   }

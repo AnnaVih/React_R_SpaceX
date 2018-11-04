@@ -40,7 +40,7 @@ const HomeHeader = () => (
     </HeaderContent>
     <Link to="/info">
       <Button color="white" bgColor="#181c1f">
-        <b>READ MORE</b>
+        READ MORE
       </Button>
     </Link>
   </HeaderWrapper>

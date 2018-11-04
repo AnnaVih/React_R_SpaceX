@@ -1,7 +1,7 @@
 import * as actionTypes from '../actions/action_types'
 
 const initialState = {
-  isAuth: true
+  isAuth: false
 }
 
 const reducer = (state = initialState, action) => {
