@@ -42,9 +42,9 @@ const NavigationLinks = ({ authenticated, onLogoutClick }) => {
   const authLinks = (
     <Aux>
       <NavigationItem>
-        <a onClick={onLogoutClick} href="#">
+        <NavLink to="/logout" onClick={onLogoutClick}>
           Log out
-        </a>
+        </NavLink>
       </NavigationItem>
     </Aux>
   )
