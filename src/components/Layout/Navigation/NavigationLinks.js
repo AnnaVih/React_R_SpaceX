@@ -9,6 +9,7 @@ const NavigationLinksWrapper = styled.div`
   display: none;
   width: 100%;
   background: lightgray;
+  z-index: 1;
   @media (min-width: 767px) {
     width: ${props => props.navWidth}%;
     background: none;
