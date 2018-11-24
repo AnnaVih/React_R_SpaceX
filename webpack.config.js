@@ -1,6 +1,3 @@
-const Dotenv = require('dotenv-webpack')
-
-const DotenvConfig = new Dotenv()
 const HTMLWebpackPlugin = require('html-webpack-plugin')
 
 const HTMLWebpackPluginConfig = new HTMLWebpackPlugin({
@@ -46,7 +43,7 @@ module.exports = {
       }
     ]
   },
-  plugins: [HTMLWebpackPluginConfig, DotenvConfig],
+  plugins: [HTMLWebpackPluginConfig],
   devServer: {
     historyApiFallback: true
   }
