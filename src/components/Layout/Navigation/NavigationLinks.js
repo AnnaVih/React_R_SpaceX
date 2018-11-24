@@ -20,6 +20,7 @@ const NavigationLinksWrapper = styled.div`
 const SubNavigationLinks = styled.div`
   display: flex;
   flex-wrap: wrap;
+  justify-content: flex-end;
   width: 100%;
   @media (min-width: 767px) {
     width: ${props => props.navWidth}%;

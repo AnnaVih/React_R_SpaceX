@@ -12,7 +12,7 @@ const SubFooter = styled.div`
 
 const FooterContent = styled.div`
   margin: 0 auto;
-  max-width: 990px;
+  max-width: 1280px;
   min-width: 360px;
   color: white;
 `
