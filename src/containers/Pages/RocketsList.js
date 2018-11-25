@@ -7,9 +7,10 @@ class RocketsList extends Component {
   }
 
   render() {
+    const { data } = this.state
     return (
       <Aux>
-        <h1 data={this.state.data}>Rockets List</h1>
+        <h1 data={data}>Rockets List</h1>
       </Aux>
     )
   }

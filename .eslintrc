@@ -5,7 +5,8 @@
   "env": {
     "node": true,
     "browser": true,
-    "es6": true
+    "es6": true,
+    "jest": true
   },
   "rules": {
     "jsx-a11y/anchor-is-valid": "off",
@@ -20,7 +21,7 @@
     "prettier/prettier": [
       "error",
       {
-        "trailingComma": false,
+        "trailingComma": "none",
         "singleQuote": true,
         "printWidth": 120,
         "semi": false

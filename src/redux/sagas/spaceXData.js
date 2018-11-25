@@ -4,9 +4,9 @@ import * as actions from '../actions/index'
 
 export const ROOT_DATA = 'https://api.spacexdata.com/v2'
 
-export function* requestCompanyInfoSaga(action) {
+export function* requestCompanyInfoSaga({ queryParam }) {
   try {
-    const infoUrl = `${ROOT_DATA}${action.queryParam}`
+    const infoUrl = `${ROOT_DATA}${queryParam}`
     const requestedData = yield axios.get(infoUrl)
     yield put(actions.displayCompanyInfo(requestedData.data))
   } catch (err) {

@@ -5,13 +5,13 @@ import styled from 'styled-components'
 
 import SpaceXBgImage from '../../../assets/images/missions-header.jpg'
 
-import HeadLine from '../../HeadLine'
-import Button from '../../Button'
+import HeadLine from '../../../common/HeadLine/HeadLine'
+import Button from '../../../common/Button/Button'
 
 const HeaderWrapper = styled.header`
-  background-image: url(${SpaceXBgImage});
+  background: linear-gradient(to right bottom, rgba(33, 31, 33, 0.5), rgba(33, 31, 33, 0.3)), url(${SpaceXBgImage});
   background-size: cover;
-  background-position: 100%;
+  background-position: center;
   text-align: center;
   padding-bottom: 20%;
   height: 70vh;
@@ -21,28 +21,26 @@ const HeaderWrapper = styled.header`
 `
 
 const HeaderContent = styled.div`
-  display: flex;
-  align-items: center;
-  text-align: center;
-  margin: 0 auto;
-  max-width: 990px;
-  min-width: 360px;
-  height: 300px;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 `
 
 const HomeHeader = () => (
   <HeaderWrapper>
     <HeaderContent>
+      <HeadLine>SpaceX</HeadLine>
       <HeadLine>
         Our launch manifest is populated by a diverse customer base, including space station resupply missions,
         commercial satellite launch missions, and US government science and national security missions.
       </HeadLine>
+      <Link to="/info">
+        <Button color="white" bgColor="#181c1f">
+          READ MORE
+        </Button>
+      </Link>
     </HeaderContent>
-    <Link to="/info">
-      <Button color="white" bgColor="#181c1f">
-        <b>READ MORE</b>
-      </Button>
-    </Link>
   </HeaderWrapper>
 )
 

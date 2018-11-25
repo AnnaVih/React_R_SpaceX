@@ -7,9 +7,10 @@ class Blog extends Component {
   }
 
   render() {
+    const { data } = this.state
     return (
       <Aux>
-        <h1 data={this.state.data}>Blog Item</h1>
+        <h1 data={data}>Blog Item</h1>
       </Aux>
     )
   }

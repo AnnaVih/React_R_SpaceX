@@ -7,9 +7,10 @@ class Login extends Component {
   }
 
   render() {
+    const { data } = this.state
     return (
       <Aux>
-        <h1 data={this.state.data}>Login</h1>
+        <h1 data={data}>Login</h1>
       </Aux>
     )
   }

@@ -1,5 +1,5 @@
-import React, { Component } from 'react'
-
+import React from 'react'
+import PropTypes from 'prop-types'
 import { NavLink } from 'react-router-dom'
 import styled from 'styled-components'
 
@@ -9,6 +9,7 @@ const NavigationLinksWrapper = styled.div`
   display: none;
   width: 100%;
   background: lightgray;
+  z-index: 1;
   @media (min-width: 767px) {
     width: ${props => props.navWidth}%;
     background: none;
@@ -20,6 +21,7 @@ const NavigationLinksWrapper = styled.div`
 const SubNavigationLinks = styled.div`
   display: flex;
   flex-wrap: wrap;
+  justify-content: flex-end;
   width: 100%;
   @media (min-width: 767px) {
     width: ${props => props.navWidth}%;
@@ -38,63 +40,54 @@ const NavigationItem = styled.div`
     border: none;
   }
 `
+const NavigationLinks = ({ authenticated, onLogoutClick }) => {
+  const authLinks = (
+    <Aux>
+      <NavigationItem>
+        <NavLink to="/logout" onClick={onLogoutClick}>
+          Log out
+        </NavLink>
+      </NavigationItem>
+    </Aux>
+  )
 
-class NavigationLinks extends Component {
-  onLogoutClick = e => {
-    e.preventDefault()
-    this.props.logoutUser()
-  }
+  const guestLinks = (
+    <Aux>
+      <NavigationItem>
+        <NavLink to="/login">Login</NavLink>
+      </NavigationItem>
+      <NavigationItem>
+        <NavLink to="/register">Sign Up</NavLink>
+      </NavigationItem>
+    </Aux>
+  )
 
-  render() {
-    // const { isAuthenticated } = this.props.auth
-    const isAuthenticated = false
+  return (
+    <Aux>
+      <NavigationLinksWrapper navWidth={70}>
+        <SubNavigationLinks navWidth={75}>
+          <NavigationItem>
+            <NavLink to="/info">ABOUT SPACEX</NavLink>
+          </NavigationItem>
+          <NavigationItem>
+            <NavLink to="/rockets">ROCKETS</NavLink>
+          </NavigationItem>
+          <NavigationItem>
+            <NavLink to="/launches">LAUNCHES</NavLink>
+          </NavigationItem>
+          <NavigationItem>
+            <NavLink to="/blog">BLOG</NavLink>
+          </NavigationItem>
+        </SubNavigationLinks>
+        <SubNavigationLinks navWidth={25}>{authenticated ? authLinks : guestLinks}</SubNavigationLinks>
+      </NavigationLinksWrapper>
+    </Aux>
+  )
+}
 
-    const authLinks = (
-      <Aux>
-        <NavigationItem>
-          <NavLink to="/blogs">Blog</NavLink>
-        </NavigationItem>
-        <NavigationItem>
-          <a onClick={this.onLogoutClick} href="#">
-            Log out
-          </a>
-        </NavigationItem>
-      </Aux>
-    )
-
-    const guestLinks = (
-      <Aux>
-        <NavigationItem>
-          <NavLink to="/login">Login</NavLink>
-        </NavigationItem>
-        <NavigationItem>
-          <NavLink to="/register">Sign Up</NavLink>
-        </NavigationItem>
-      </Aux>
-    )
-
-    return (
-      <Aux>
-        <NavigationLinksWrapper navWidth={70}>
-          <SubNavigationLinks navWidth={75}>
-            <NavigationItem>
-              <NavLink to="/info">ABOUT SPACEX</NavLink>
-            </NavigationItem>
-            <NavigationItem>
-              <NavLink to="/rockets">ROCKETS</NavLink>
-            </NavigationItem>
-            <NavigationItem>
-              <NavLink to="/launches">LAUNCHES</NavLink>
-            </NavigationItem>
-            <NavigationItem>
-              <NavLink to="/blog">BLOG</NavLink>
-            </NavigationItem>
-          </SubNavigationLinks>
-          <SubNavigationLinks navWidth={25}>{isAuthenticated ? authLinks : guestLinks}</SubNavigationLinks>
-        </NavigationLinksWrapper>
-      </Aux>
-    )
-  }
+NavigationLinks.propTypes = {
+  authenticated: PropTypes.bool.isRequired,
+  onLogoutClick: PropTypes.func.isRequired
 }
 
 export default NavigationLinks

@@ -6,8 +6,11 @@ import Aux from '../../hoc/Aux/Aux'
 
 class AboutPage extends Component {
   componentDidMount() {
-    const { pathname } = this.props.location
-    this.props.fetchCompanyInfo(pathname)
+    const {
+      location: { pathname }
+    } = this.props
+    const { fetchCompanyInfo } = this.props
+    fetchCompanyInfo(pathname)
   }
 
   render() {

@@ -1,6 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-
+import { BrowserRouter } from 'react-router-dom'
 import { Provider as ReduxProvider } from 'react-redux'
 
 import 'bootstrap/dist/css/bootstrap.min.css'
@@ -12,7 +12,9 @@ import App from './App'
 
 ReactDOM.render(
   <ReduxProvider store={store}>
-    <App />
+    <BrowserRouter>
+      <App />
+    </BrowserRouter>
   </ReduxProvider>,
   document.getElementById('root')
 )

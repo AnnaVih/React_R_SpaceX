@@ -1,13 +1,8 @@
-import { takeEvery, all } from 'redux-saga/effects'
-import * as actionTypes from '../actions/action_types'
-import { requestCompanyInfoSaga } from './spaceXData'
-
-export function* fetchCompanyInfoFromAPI() {
-  yield takeEvery(actionTypes.FETCH_COMPANY_INFO, requestCompanyInfoSaga)
-}
+import { all } from 'redux-saga/effects'
+import { watchFetchCompanyInfo } from './watcher'
 
 function* rootSaga() {
-  yield all([fetchCompanyInfoFromAPI()])
+  yield all([watchFetchCompanyInfo()])
 }
 
 export default rootSaga
