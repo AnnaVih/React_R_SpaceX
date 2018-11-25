@@ -10,7 +10,12 @@ const SimpleButton = styled.button`
   border-radius: 10px;
   transition: all 0.3s ease 0s;
   &:hover {
-    border: 7px solid #dfa404;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(255, 255, 255, 0.2);
+  }
+  &:active {
+    transform: translateY(-1px);
+    box-shadow: 0 5px 10px rgba(255, 255, 255, 0.2);
   }
 `
 

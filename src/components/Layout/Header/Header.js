@@ -30,6 +30,7 @@ const HeaderContent = styled.div`
 const HomeHeader = () => (
   <HeaderWrapper>
     <HeaderContent>
+      <HeadLine>SpaceX</HeadLine>
       <HeadLine>
         Our launch manifest is populated by a diverse customer base, including space station resupply missions,
         commercial satellite launch missions, and US government science and national security missions.
