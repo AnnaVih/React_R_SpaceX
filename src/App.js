@@ -25,9 +25,9 @@ const App = () => (
   <Aux>
     <Navigation />
     <Route exact path="/" component={HomePage} />
+    <Route path="/info" component={InfoPage} />
     <Layout>
       <Switch>
-        <Route path="/info" component={InfoPage} />
         <Route path="/rockets" component={RocketsList} />
         <Route path="/rockets/:id" component={Rocket} />
         <Route path="/launches" component={LaunchesList} />
